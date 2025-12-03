@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e3f0ff 100%);
+    color: #22223b;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(34, 87, 122, 0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.web {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #22577a;
+}
+
+.logo {
+    height: 38px;
+    width: 38px;
+    margin-right: 12px;
+}
+
+.web a {
+    color: #22577a;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.element {
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    margin-left: 28px;
+    font-size: 1.1rem;
+}
+
+.item a {
+    color: #22223b;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 22px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.item a:hover, .item a:focus {
+    background: #e3f0ff;
+    color: #22577a;
+    outline: none;
+}
+
+.login-btn {
+    background: #22577a;
+    color: #fff !important;
+    font-weight: 600;
+    border-radius: 22px;
+    padding: 8px 28px !important;
+    margin-left: 18px;
+    transition: background 0.2s;
+}
+
+.login-btn:hover, .login-btn:focus {
+    background: #38a3a5;
+    color: #fff !important;
+}
+
+/* main content of about */
+/* ...existing code... */
+.about {
+    max-width: 800px;
+    width: 95%;
+    margin: 40px auto 32px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 18px;
+    padding: 36px 28px;
+    box-shadow: 0 4px 24px rgba(34, 87, 122, 0.08);
+    align-items: center;
+}
+
+.aboutheading {
+    margin-top: 5px;
+    font-size: 2.2rem;
+    color: #22577a;
+    font-weight: bold;
+    text-align: center;
+}
+
+.about h2 {
+    color: #22577a;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.about p {
+    font-size: 1.08rem;
+    color: #22223b;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.about-list {
+    margin: 0 auto 0 auto;
+    padding-left: 1.2em;
+    text-align: left;
+    max-width: 500px;
+}
+
+.about-list li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #22577a;
+    line-height: 1.6;
+}
+/* ...existing code... */
+/* footer */
+.lastpart {
+    height: 60px;
+    background: #fff;
+    border-top: 1px solid #e3f0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #22577a;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    .properties {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 16px;
+    }
+    .element {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .item {
+        margin-left: 0;
+        margin-right: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .greetings h1 {
+        font-size: 2rem;
+    }
+    .properties {
+        padding: 24px 10px;
+    }
+    .navbar {
+        padding: 10px 6px;
+    }
+}

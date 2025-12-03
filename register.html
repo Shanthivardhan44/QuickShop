@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickShop — Register</title>
+  <link rel="stylesheet" href="register.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="web">
+        <img src="logo.png" alt="QuickShop Logo" class="logo">
+        <a href="quick.html">QuickShop</a>
+      </div>
+      <div class="element">
+        <div class="item"><a href="quick.html">Home</a></div>
+        <div class="item"><a href="about.html">About</a></div>
+        <div class="item"><a href="help.html">Help</a></div>
+        <div class="item"><a href="login.html" class="login-btn">Login</a></div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="register-page">
+    <section class="register-card" aria-labelledby="register-title">
+      <h1 id="register-title">Create Your QuickShop Account</h1>
+      <p class="subtitle">Please fill in the details below to get started.</p>
+
+      <form id="register-form" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required placeholder="Enter your full name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="reg-email" name="email" type="email" required placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="reg-password" name="password" type="password" required minlength="4"
+            placeholder="Create a password">
+        </div>
+
+        <div class="form-group">
+          <label for="confirm">Confirm Password</label>
+          <input id="reg-confirm" name="confirm" type="password" required minlength="4"
+            placeholder="Re-enter your password">
+        </div>
+
+        <div id="reg-error" class="error" role="alert" aria-live="polite" hidden></div>
+
+        <button id="register" type="submit" class="primary">Create Account</button>
+
+        <p class="small">Already have an account? <a href="login.html">Sign in</a></p>
+      </form>
+    </section>
+
+    <footer class="login-footer">© 2025 QuickShop. All rights reserved.</footer>
+  </main>
+</body>
+
+</html>

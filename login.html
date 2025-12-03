@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>QuickShop — Login</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+    <main class="login-page">
+        <header>
+        <nav class="navbar">
+            <div class="web">
+                <img src="logo.png" alt="QuickShop Logo" class="logo">
+                <a href="quick.html">QuickShop</a>
+            </div>
+            <div class="element">
+                <div class="item"><a href="quick.html">Home</a></div>
+                <div class="item"><a href="about.html">About</a></div>
+                <div class="item"><a href="help.html">Help</a></div>
+                <div class="item"><a href="login.html" class="login-btn">Login</a></div>
+            </div>
+        </nav>
+        </header>
+
+        <section class="login-card" aria-labelledby="login-title">
+            <h1 id="login-title">Sign in to QuickShop</h1>
+            <p class="subtitle">Secure access to smart billing and dashboard</p>
+
+            <form id="login-form" novalidate>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" inputmode="email" required autocomplete="email" placeholder="Enter your email">
+
+                <label for="password">Password</label>
+                <div class="pw-row">
+                    <input id="password" name="password" type="password" required autocomplete="current-password" placeholder="Enter your password" minlength="4">
+                    <button type="button" id="toggle-pw" aria-label="Show password">Show</button>
+                </div>
+
+                <div class="row between">
+                    <label class="checkbox">
+            <input id="remember" name="remember" type="checkbox">
+            <span>Remember me</span>
+          </label>
+                    <a href="#" class="forgot">Forgot?</a>
+                </div>
+
+                <div id="error" role="alert" aria-live="polite" class="error" hidden></div>
+
+                <button id="submit" type="submit" class="primary">Sign in</button>
+
+                <p class="small">
+                    No account? <a href="register.html">Sign up</a> · <a href="quick.html">Continue as guest</a>
+                </p>
+            </form>
+        </section>
+
+        <footer class="login-footer">
+            © 2025 QuickShop
+        </footer>
+    </main>
+
+    <script src="login.js" defer></script>
+</body>
+
+</html>

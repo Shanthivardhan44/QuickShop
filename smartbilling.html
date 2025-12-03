@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuickShop - Smart Billing</title>
+  <link rel="stylesheet" href="smartbilling.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <nav class="navbar">
+        <div class="web">
+          <img src="logo.png" alt="QuickShop Logo" class="logo">
+                    <a href="quick.html">QuickShop</a>
+        </div>
+        <div class="element">
+          <div class="item"><a href="quick.html">Home</a></div>
+          <div class="item"><a href="about.html">About</a></div>
+          <div class="item"><a href="help.html">Help</a></div>
+          <div class="item"><a href="login.html" class="login-btn">Login</a></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="supermarket-select">
+        <label for="supermarket">Select Supermarket:</label>
+        <select id="supermarket">
+          <option value="QuickShop Supermarket">QuickShop Supermarket</option>
+          <option value="FreshMart">FreshMart</option>
+          <option value="DailyNeeds">DailyNeeds</option>
+          <option value="MegaStore">MegaStore</option>
+        </select>
+      </div>
+      <div class="headingbox">
+        <h1 class="heading">Smart Billing</h1>
+        <p id="slogan">"Scan Fast, Bill Smart — The Future of Checkout is Here!"</p>
+      </div>
+
+      <div class="outerdiv">
+        <div class="scannerdiv">
+          <h2>SCAN CODE FROM HERE</h2>
+          <button class="imageofbtn">
+            <img src="image.png" alt="Barcode Scanner Button" />
+          </button>
+          <button id="start-scan" class="btn-nosub">Scan Barcode</button>
+          <div id="scanner-preview" style="width:300px; height:200px; margin:16px auto; display:none;"></div>
+          <p>or</p>
+          <div class="enter-barcode">
+            <input class="enter-barcode-number" type="text" maxlength="13" placeholder="enter barcode number">
+            <button class="btn-nosub">Submit</button>
+          </div>
+        </div>
+
+        <div class="billingdiv">
+          <h2 id="selected-market" style="margin-top: 0;">Billing Info</h2>
+          <ul id="bill-items"></ul>
+          <div class="bill-totals">
+            <p class="total">Total Price: ₹-</p>
+            <p id="total-qty">Total Products: 0</p>
+            <p id="total-weight">Total Weight: 0 kg</p>
+          </div>
+          <button class="pay-btn"><a href="billdetails.html">Pay Now</a></button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      © 2025 QuickShop.
+    </footer>
+  </div>
+  <script src="smartbilling.js"></script>
+</body>
+</html>

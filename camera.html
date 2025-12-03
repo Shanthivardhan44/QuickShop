@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Camera Access</title>
+</head>
+<body>
+  <h2>Camera Preview</h2>
+  <video id="camera" autoplay playsinline width="640" height="480"></video>
+  <p id="status"></p>
+  <script>
+    const video = document.getElementById('camera');
+    const status = document.getElementById('status');
+
+    navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+      .then(stream => {
+        video.srcObject = stream;
+        status.textContent = "Camera access granted ✅";
+      })
+      .catch(error => {
+        status.textContent = `Camera access denied ❌: ${error.message}`;
+        console.error("Error accessing camera:", error);
+      });
+  </script>
+</body>
+</html>
+
